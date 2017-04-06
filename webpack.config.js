@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack')
-var libraryName = 'Resize'
+var libraryName = 'elementResize'
 
 module.exports = {
   entry: "./src/main.js",

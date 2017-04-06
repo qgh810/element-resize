@@ -9,14 +9,14 @@ function checkParams (el, callback) {
   el = checkNode(el)
   if (!el) return false
   if (typeof callback !== 'function') {
-    showWarn('请传递回掉函数')
+    showWarn('请传递回调函数')
     return false
   }
   return true
 }
 
 init (el, callback) {
-
+  console.log(el)
 }
 
 

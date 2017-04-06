@@ -1,7 +1,7 @@
 {
   "name": "element-resize",
-  "version": "0.1.6",
-  "description": "beautiful element-resize",
+  "version": "0.0.1",
+  "description": "element-resize",
   "main": "dist/element-resize.js",
   "scripts": {
     "dev": "webpack --watch",
@@ -12,8 +12,6 @@
     "url": "git+https://github.com/qgh810/element-resize.git"
   },
   "keywords": [
-    "ripple",
-    "ripples",
     "element-resize"
   ],
   "author": "qiuguohui",
