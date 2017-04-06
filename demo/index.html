@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>漂亮的滚动条</title>
+    <title>监听节点大小改变</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <script type="text/javascript" src="../dist/element-resize.js"></script>
 
@@ -27,6 +27,18 @@
       .app-root {
         width: 100%;
       }
+
+      .header {
+        text-align: center;
+      }
+
+      .demo-box {
+        /*position: relative;*/
+        margin: 50px auto;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(0, #c0252e, rgba(0,0,255,0.5));
+      }
     </style>
   </head>
   <body>
@@ -46,7 +58,10 @@
   </body>
   <script>
     function init () {
-
+      elementResize('.demo-box', function (e) {
+        console.log('监听到打大小改变')
+        console.log(e)
+      })
     }
 
     window.onload = function () {
