@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>漂亮的滚动条</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript" src="../dist/element-resize.js"></script>
+
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      .app-root {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background: #fff;
+      }
+      .app-root {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-root">
+      <header class="header">
+        <h1>element-resize 漂亮的滚动条</h1>
+        <div class="addr">
+          <span>说明文档: </span><a id="addr" href="">https://github.com/qgh810/scroll</a>
+        </div>
+      </header>
+
+
+      <div class="demo-box">
+      </div>
+
+
+    </div>
+  </body>
+  <script>
+    function init () {
+
+    }
+
+    window.onload = function () {
+      init()
+
+      var addrBtn = document.getElementById('addr')
+      addrBtn.addEventListener('click', function (e) {
+        e.preventDefault()
+        window.open('https://github.com/qgh810/touch-ripple')
+      }, false)
+
+    }
+  </script>
+</html>
