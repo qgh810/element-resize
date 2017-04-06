@@ -53,15 +53,22 @@
 
       <div class="demo-box">
       </div>
+      <div class="log">
 
+      </div>
     </div>
   </body>
   <script>
     function init () {
       elementResize('.demo-box', function (e) {
-        console.log('监听到打大小改变')
-        console.log(e)
+        showLog('监听到.demo-box大小变化, width: ' + e.width + ', height: ' + e.height)
+        console.log('监听到.demo-box大小变化', e)
       })
+    }
+
+    function showLog (str) {
+      var log = document.getElementsByClassName('log')[0]
+      log.innerHTML += str + '<br>'
     }
 
     window.onload = function () {

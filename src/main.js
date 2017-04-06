@@ -14,6 +14,7 @@ function elementResize (node, fn) {
 function init () {
   setElStyle()
   setAttribute()
+  addListener()
   appendObjectNode()
 }
 
@@ -28,6 +29,21 @@ function setElStyle () {
 function setAttribute () {
   setObjectNodeStyle()
   setObjectNodeType()
+}
+
+function addListener () {
+  objectNode.onload = function () {
+    objectNode.contentDocument.defaultView.addEventListener('resize', (e) => {
+      let { width, height } = el.getBoundingClientRect()
+      let params = {
+        element: el,
+        type: 'resize',
+        width,
+        height
+      }
+      callback(params)
+    })
+  }
 }
 
 function setObjectNodeStyle () {

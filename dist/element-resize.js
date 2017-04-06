@@ -161,6 +161,7 @@ function elementResize(node, fn) {
 function init() {
   setElStyle();
   setAttribute();
+  addListener();
   appendObjectNode();
 }
 
@@ -175,6 +176,24 @@ function setElStyle() {
 function setAttribute() {
   setObjectNodeStyle();
   setObjectNodeType();
+}
+
+function addListener() {
+  objectNode.onload = function () {
+    objectNode.contentDocument.defaultView.addEventListener('resize', function (e) {
+      var _el$getBoundingClient = el.getBoundingClientRect(),
+          width = _el$getBoundingClient.width,
+          height = _el$getBoundingClient.height;
+
+      var params = {
+        element: el,
+        type: 'resize',
+        width: width,
+        height: height
+      };
+      callback(params);
+    });
+  };
 }
 
 function setObjectNodeStyle() {
